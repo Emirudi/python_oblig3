@@ -10,7 +10,7 @@ on:
 jobs:
   tests:
     name: "Run tests"
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout and setup
         uses: actions/checkout@v3
