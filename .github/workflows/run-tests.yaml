@@ -10,14 +10,14 @@ on:
 jobs:
   tests:
     name: "Run tests"
-    run_on: ubuntu-latest
+    runs_on: ubuntu-latest
     steps:
       - name: Checkout and setup
         uses: actions/checkout@v3
       - name: Setup Python
         uses: action/setup-python@v4
         with:
-          python-version: '3-9'
+          python-version: '3.9'
       - name: Install poetry
         run: pipx install poetry
       - name: Install dependencies
