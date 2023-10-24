@@ -1,23 +1,23 @@
 name: run-leap-year-tests
 on:
   push:
-    branch:
+    branches:
       - main
-    pull_request:
-      branches:
-        - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   tests:
     name: "Run tests"
-    run_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout and setup
         uses: actions/checkout@v3
       - name: Setup Python
-        uses: action/setup-python@v4
+        uses: actions/setup-python@v4
         with:
-          python-version: '3-9'
+          python-version: '3.9'
       - name: Install poetry
         run: pipx install poetry
       - name: Install dependencies
