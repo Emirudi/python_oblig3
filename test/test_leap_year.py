@@ -15,7 +15,7 @@ def leap_year():
 # Kan deles på 4 men ikke på 100
 def test_is_divided_by_4_but_not_100(leap_year):
     year_checker = leap_year(2004)
-    assert year_checker.is_leap_year() is False
+    assert year_checker.is_leap_year() is True
 
 
 # Kan deles på 400
